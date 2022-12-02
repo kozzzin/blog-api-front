@@ -1,41 +1,127 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+body {
+  place-items: start !important;
+}
+
+.active {
+  background-color: red;
+}
+
+form {
+  text-align: left;
+  color: #fff;
+}
+
+.label {
+  color: #fff;
+}
+
+.site-name {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-right: 2rem;
+}
+
+.blog-navbar {
+  color: #fff;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.blog-navbar a {
+  color: #fff
+}
+
+
+
+.title,
+.subtitle {
+  color: #fff;
+}
+
+.blog-post {
+  margin: 0 0 30px;
+  padding: 25px;
+  text-align: left;
+  max-width: 960px;
+}
+
+.blog-post ul {
+  list-style-type: none;
+  display: flex;
+  justify-content:space-between;
+  justify-items: left;
+  padding-left: 0;
+}
+
+.blog-post ul li {
+
+}
+
+.post-info {
+  font-size: 0.8rem;
+}
+
+.comments {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.comments ul {
+  list-style-type: none;
+}
+
+.comment-text {
+  flex: 8;
+  font-size: 1rem;
+}
+
+.comment-author {
+  flex: 1;
+}
+
+.comment-date {
+  flex: 1;
+}
+
 #root {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   text-align: center;
+  color: #fff;
+  align-content: flex-start;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App {
+  display: flex;
+  align-content: center;
+  flex-flow: column wrap;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+  margin-bottom: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.comment-author {
+  display: block;
+  font-weight: bold;
 }
 
-.card {
-  padding: 2em;
+.comment-date {
+  display: block;
+  font-style: italic;
+  font-size: 0.8rem;
 }
 
-.read-the-docs {
-  color: #888;
+.comment {
+  margin-bottom: 2rem;
 }
