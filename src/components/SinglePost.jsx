@@ -8,26 +8,15 @@ export default function SinglePost(props) {
   const [comments,setComments] = useState([]);
   const [post,setPost] = useState({});
 
-
-
   useEffect(() => {
     setPost(initPost);
     setComments(initComments);
-  },[initPost,initComments]);
-  // useEffect(() => {
-  //   fetch(`http://localhost:8888/comment/${post._id}`)
-  //   .then(response => response.json())
-  //   .then(comments => {
-  //     setComments(comments)
-  //   })
-  //   .catch(err => console.log(err));
-  // },[]);
-
+  },[]);
 
   return (
     <>
       <div className='blog-post'>
-        <h1 className='title is1'>{ post.title }</h1>
+        <h1 className='title is-1'>{ post.title }</h1>
         <p>{ post.text }</p>
         <ul className='post-info block'>
           <li>Author: {post.author ? post.author.username : 'Admin'}</li>

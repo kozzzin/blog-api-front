@@ -2,9 +2,6 @@ import { useEffect, useState } from "react";
 import * as React from "react";
 import { NavLink } from "react-router-dom";
 
-// SET LOGGED In
-// CONFIG LOG OUT !!!
-
 export default function Navbar(props) {
   const [loggedIn,setLoggedIn] = useState(0);
 

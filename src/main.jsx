@@ -6,6 +6,8 @@ import IndexTeasers from './components/IndexTeasers';
 import LoginForm from './components/login';
 import SignupForm from './components/signup';
 import SinglePost from './components/SinglePost';
+import Categories from './components/Categories';
+import SingleCategory from './components/SingleCategory';
 
 import {
   createBrowserRouter,
@@ -34,7 +36,27 @@ const router = createBrowserRouter([
       },
       {
         path: '/categories',
-        element: 'CAtegories',
+        element: <Categories />,
+        loader: async function() {
+          return fetch(
+            'http://localhost:8888/category',
+            {
+              mode: 'cors'
+            }
+          ).then(res => res.json());
+        }
+      },
+      {
+        path: '/categories/:id',
+        element: <SingleCategory />,
+        loader: async function({ params }) {
+          return fetch(
+            `http://localhost:8888/category/${params.id}`,
+            {
+              mode: 'cors'
+            }
+          ).then(res => res.json())
+        }
       },
       {
         path: '/post/:id',

@@ -50,6 +50,7 @@ form {
   padding: 25px;
   text-align: left;
   max-width: 960px;
+  width: 100%;
 }
 
 .blog-post ul {
@@ -66,7 +67,10 @@ form {
 
 .post-info {
   font-size: 0.8rem;
+  flex-flow: column wrap;
 }
+
+
 
 .comments {
   color: grey;
@@ -124,4 +128,8 @@ nav {
 
 .comment {
   margin-bottom: 2rem;
+}
+
+.post-info {
+  margin-top: 2rem;
 }
